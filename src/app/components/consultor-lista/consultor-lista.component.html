@@ -1,0 +1,7 @@
+<div class="lista">
+  <app-consultor-card
+    *ngFor="let consultor of consultores()"
+    [consultor]="consultor"
+    (statusChange)="onStatusToggle($event)">
+  </app-consultor-card>
+</div>

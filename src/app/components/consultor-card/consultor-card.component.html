@@ -1,0 +1,13 @@
+<div class="card">
+  <h3>{{ consultorSignal()?.nome }}</h3>
+  <p><strong>Especialidade:</strong> {{ consultorSignal()?.especialidade }}</p>
+  <p>
+    <strong>Status:</strong>
+    <span [style.color]="consultorSignal()?.ativo ? 'green' : 'red'">
+      {{ consultorSignal()?.ativo ? 'Ativo ✅' : 'Inativo ❌' }}
+    </span>
+  </p>
+  <button (click)="toggleStatus()">
+    {{ consultorSignal()?.ativo ? 'Desativar' : 'Ativar' }}
+  </button>
+</div>
